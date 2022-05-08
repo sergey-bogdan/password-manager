@@ -1,0 +1,76 @@
+@import "../../styles/tokens";
+
+.InputContainer {
+  width: 100%;
+  font-size: 14px;
+  line-height: 150%;
+  color: $text-gray;
+
+  margin-bottom: 24px;
+
+  &.error {
+    margin-bottom: 5px;
+    color: $status-error;
+  }
+}
+
+.InputControl {
+  padding: 8px 15px 9px;
+  // border: 1px solid #aeaeae;
+  box-shadow: inset 0px 0px 0 1px #aeaeae;
+  // border: 1px solid $color-primary;
+  border-radius: 4px;
+
+  .Focused & {
+    // border-color: $color-primary;
+    box-shadow: inset 0px 0px 0 1px $color-primary;
+    // border-co
+  }
+
+  .error & {
+    // border-color: $status-error;
+    box-shadow: inset 0px 0px 0 1px $status-error;
+  }
+}
+
+.Input {
+  width: 100%;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: $text-gray2;
+  }
+}
+
+.Touched {
+  //
+}
+
+.Label {
+  display: block;
+  width: 100%;
+
+  font-size: 12px;
+  line-height: 150%;
+  margin-bottom: 4px;
+
+  color: $text-gray2;
+
+  .Focused & {
+    color: $color-primary;
+  }
+
+  .error & {
+    color: $status-error;
+  }
+}
+
+.ErrorMessage {
+  text-align: right;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+
+  margin-top: 4px;
+}

@@ -1,0 +1,59 @@
+@import "../../styles/tokens";
+@import "../../styles/mixins";
+
+.Button {
+  position: relative;
+  outline: none;
+  border: none;
+  background: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 9px 24px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+
+  &.small {
+    padding: 5px 16px 6px;
+  }
+
+  &.loading {
+    color: transparent;
+    pointer-events: none;
+  }
+}
+
+.primary {
+  background: $color-primary;
+  color: white;
+
+  @include active-hover() {
+    background: $color-primary-dark;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px rgba(0, 25, 250, 0.25);
+  }
+}
+
+.secondary {
+  background: $color-gray;
+  color: black;
+
+  @include active-hover() {
+    background: darken($color-gray, 5%);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px rgba(0, 25, 250, 0.25);
+  }
+}
+
+.disabled {
+  background: $color-gray;
+  color: $text-gray;
+}
